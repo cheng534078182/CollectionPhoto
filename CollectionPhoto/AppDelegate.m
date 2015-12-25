@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ZXCollectionPhotoController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    ZXCollectionPhotoController * VC = [[ZXCollectionPhotoController alloc]init];
+    UINavigationController * nav = [[UINavigationController alloc]initWithRootViewController:VC];
+    
+    self.window.rootViewController = nav;
     return YES;
 }
 
